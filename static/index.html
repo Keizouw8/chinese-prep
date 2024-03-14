@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/9d7715f45c.js" crossorigin="anonymous"></script>
+	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Chinese Prep</title>
+</head>
+<body>
+	<a id="downloader"></a>
+	<h1>Chinese Prep <span class="chinese comment">中文准备</span></h1>
+	<select id="focus">
+		<option value="manage">Manage Table</option>
+		<option value="practice">Practice</option>
+	</select>
+	<div id="manage" class="container">
+		<button id="export">Export</button><button id="import"><input type="file" accept="application/json" autocomplete="off">Import</button>
+		<table cellspacing="0">
+			<tr>
+				<th>English</th>
+				<th>Pinyin</th>
+				<th>Chinese</th>
+			</tr>
+		</table>
+		<button id="newrow">New Row</button>
+	</div>
+	<div id="practice" class="container" style="display: none;">
+		<h2>Options</h2>
+		<b>Test From: </b>
+		<input type="checkbox" id="0" checked>
+		<label for="0">English</label>
+		<input type="checkbox" id="1" checked>
+		<label for="1">Pinyin</label>
+		<input type="checkbox" id="2" checked>
+		<label for="2">Chinese</label>
+		<br><br>
+		<button id="reset">Reset Shuffle</button><button id="flip">Flip</button><button id="next">Next</button>
+		<card showing="0">
+			<front>
+				<p id="class"></p>
+				<h1 id="value"></h1>
+			</front>
+			<back>
+				<p><b><span id="class"></span>: </b><span id="value"></span></p>
+				<br>
+				<p><b><span id="class"></span>: </b><span id="value"></span></p>
+			</back>
+		</card>
+	</div>
+</body>
+</html>

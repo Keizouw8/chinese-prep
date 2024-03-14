@@ -1,0 +1,160 @@
+@font-face {
+	font-family: SCKaiti;
+	src: url(STKaiti.ttf);
+}
+
+a#downloader{
+	display: none;
+}
+
+button#import{
+	position: relative;
+}
+
+button#import input[type="file"]{
+	opacity: 0;
+	position: absolute;
+	height: 27.5px;
+	width: 60px;
+	left: 0;
+	top: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+input[type=file], input[type=file]::-webkit-file-upload-button {
+    cursor: pointer; 
+}
+
+body{
+	overflow-x: hidden;
+	padding: 100px;
+	font-family: "Roboto", sans-serif;
+}
+
+button{
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: rgb(30, 30, 30);
+	margin-right: 5px;
+	color: white;
+	outline: none;
+	border: black 1px solid;
+}
+
+.chinese{
+	font-family: SCKaiti;
+}
+
+.comment{
+	color: gray;
+	font-size: x-large;
+}
+
+button{
+	cursor: pointer;
+}
+
+th{
+	text-align: left;
+}
+
+.container{
+	margin-top: 20px;
+}
+
+#manage table{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+select{
+	outline: none;
+	border: none;
+	border-bottom: solid 2px black;
+	padding-right: 100px;
+	text-indent: 0px;
+	font-size: large;
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+}
+
+input{
+	outline: none;
+	border: none;
+	padding-left: 0px;
+	padding-top: 8px;
+}
+
+input[placeholder="Chinese"]{
+	font-family: SCKaiti;
+	font-size: larger;
+}
+
+input::placeholder{
+	font-family: "Roboto", sans-serif;
+	font-size:medium
+}
+
+th{
+	width: 200px;
+	max-width: calc((100vw - 200px) / 3);
+	padding: 0;
+}
+
+td, tr {
+	padding: 0;
+	vertical-align:bottom;
+}
+
+td{
+	max-width: calc((100vw - 200px) / 3);
+	border-bottom: gray solid 1px;
+}
+
+td:has(i){
+	border: none;
+	padding-left: 10px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+td:has(i):hover{
+	opacity: 1;
+}
+
+input[type="checkbox"]{
+	accent-color: rgb(30, 30, 30);
+}
+
+card {
+	top: 20px;
+	position: relative;
+	display: block;
+	height: 300px;
+	width: 500px;
+	border: 3px solid black;
+	border-radius: 10px;
+}
+
+card front, card back{
+	display: none;
+	position: absolute;
+	top: 48%;
+	left: 48%;
+	transform: translate(-50%, -50%);
+}
+
+card front > *, card back > *{
+	padding: 0;
+	margin: 0;
+}
+
+card[showing="0"] front, card[showing="1"] back{
+	display: block;
+}
+
+card back{
+	font-size: large;
+}
